@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0c58da;
+  color: #222;
+}
+
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 1rem;
+}
+.home-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.logo {
+  width: 64px;
+  height: 64px;
+  background: #0066ee;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+.start-btn {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.75rem 1.5rem;
+  background: #0066ee;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.highlight {
+  font-weight: bold;
+  color: #0066ee;
+}
+.brand {
+  margin-top: 2rem;
+  max-width: 120px;
+  opacity: 0.8;
+}
+
+.form-wrapper {
+  max-width: 540px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+label {
+  display: block;
+  margin-bottom: 1rem;
+}
+label input[type="text"],
+label input[type="email"],
+label input[type="password"],
+label input[type="date"] {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 0.25rem;
+}
+.error {
+  color: #c03232;
+  font-size: 0.875rem;
+}
+.hint {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+.nav-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+.nav-buttons button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  background: #0066ee;
+  color: #fff;
+  cursor: pointer;
+}
+.nav-buttons button:hover {
+  background: #0048aa;
+}
+
+.avatar-section {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.avatar-preview {
+  width: 120px;
+  height: 120px;
+  border: 2px dashed #888;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  cursor: pointer;
+  margin: 0 auto 1rem;
+  overflow: hidden;
+}
+.avatar-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.interests-field {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.1rem;
+  margin-top: 0.75rem;
+}
+
+.checkbox {
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+.checkbox input {
+  margin-right: 0.4rem;
+}
