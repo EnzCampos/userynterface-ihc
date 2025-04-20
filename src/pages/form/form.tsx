@@ -61,36 +61,34 @@ export default function FormPage() {
     <main className="form-wrapper">
       <h2>Cadastro de Usuário</h2>
 
-      <section style={{ display: "flex", gap: "2rem" }}>
-        <label>
-          Nome*
-          <input
-            name="firstName"
-            value={data.firstName}
-            onChange={handleChange}
-            placeholder="Nome"
-            autoComplete="given-name"
-          />
-          {errors.firstName && (
-            <span className="error">{errors.firstName}</span>
-          )}
-        </label>
-
-        <label>
-          Sobrenome*
-          <input
-            name="lastName"
-            value={data.lastName}
-            onChange={handleChange}
-            placeholder="Sobrenome"
-            autoComplete="family-name"
-          />
-          {errors.lastName && <span className="error">{errors.lastName}</span>}
-        </label>
-      </section>
+      <label>
+        Nome*
+        <input
+          name="firstName"
+          value={data.firstName}
+          onChange={handleChange}
+          placeholder="Nome"
+          autoComplete="given-name"
+          type="text"
+        />
+        {errors.firstName && <span className="error">{errors.firstName}</span>}
+      </label>
 
       <label>
-        E‑mail*
+        Sobrenome*
+        <input
+          name="lastName"
+          value={data.lastName}
+          onChange={handleChange}
+          placeholder="Sobrenome"
+          autoComplete="family-name"
+          type="text"
+        />
+        {errors.lastName && <span className="error">{errors.lastName}</span>}
+      </label>
+
+      <label>
+        E-mail*
         <input
           type="email"
           name="email"
@@ -102,31 +100,31 @@ export default function FormPage() {
         {errors.email && <span className="error">{errors.email}</span>}
       </label>
 
-      <section style={{ display: "flex", gap: "2rem" }}>
-        <label>
-          Endereço*
-          <input
-            name="street"
-            value={data.street}
-            onChange={handleChange}
-            placeholder="Rua, Avenida, etc."
-            autoComplete="address-line1"
-          />
-          {errors.street && <span className="error">{errors.street}</span>}
-        </label>
+      <label>
+        Endereço*
+        <input
+          name="street"
+          value={data.street}
+          onChange={handleChange}
+          placeholder="Rua, Avenida, etc."
+          autoComplete="address-line1"
+          type="text"
+        />
+        {errors.street && <span className="error">{errors.street}</span>}
+      </label>
 
-        <label>
-          CEP*
-          <input
-            name="zip"
-            value={data.zip}
-            onChange={handleChange}
-            placeholder="CEP"
-            autoComplete="postal-code"
-          />
-          {errors.zip && <span className="error">{errors.zip}</span>}
-        </label>
-      </section>
+      <label>
+        CEP*
+        <input
+          name="zip"
+          value={data.zip}
+          onChange={handleChange}
+          placeholder="CEP"
+          autoComplete="postal-code"
+          type="text"
+        />
+        {errors.zip && <span className="error">{errors.zip}</span>}
+      </label>
 
       <label>
         Data de nascimento*
@@ -142,31 +140,29 @@ export default function FormPage() {
         {errors.birth && <span className="error">{errors.birth}</span>}
       </label>
 
-      <section style={{ display: "flex", gap: "2rem" }}>
-        <label>
-          Senha*
-          <input
-            type="password"
-            name="password"
-            value={data.password}
-            onChange={handleChange}
-          />
-          {errors.password && <span className="error">{errors.password}</span>}
-        </label>
+      <label>
+        Senha*
+        <input
+          type="password"
+          name="password"
+          value={data.password}
+          onChange={handleChange}
+        />
+        {errors.password && <span className="error">{errors.password}</span>}
+      </label>
 
-        <label>
-          Confirmar senha*
-          <input
-            type="password"
-            name="confirmPassword"
-            value={data.confirmPassword}
-            onChange={handleChange}
-          />
-          {errors.confirmPassword && (
-            <span className="error">{errors.confirmPassword}</span>
-          )}
-        </label>
-      </section>
+      <label>
+        Confirmar senha*
+        <input
+          type="password"
+          name="confirmPassword"
+          value={data.confirmPassword}
+          onChange={handleChange}
+        />
+        {errors.confirmPassword && (
+          <span className="error">{errors.confirmPassword}</span>
+        )}
+      </label>
 
       <p className="hint" style={{ marginTop: "-0.25rem", fontSize: "0.8rem" }}>
         A senha deve ter pelo menos 10 caracteres, 1 letra maiúscula e 1 número.

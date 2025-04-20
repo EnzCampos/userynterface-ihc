@@ -36,6 +36,9 @@ body {
   border-radius: 4px;
   text-decoration: none;
 }
+.start-btn:hover {
+  background: #0048aa;
+}
 .highlight {
   font-weight: bold;
   color: #0066ee;
@@ -54,8 +57,15 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+.form-wrapper h2 {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
 label {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 label input[type="text"],
@@ -63,24 +73,35 @@ label input[type="email"],
 label input[type="password"],
 label input[type="date"] {
   width: 100%;
-  padding: 0.5rem 0.75rem;
+  padding: 0.55rem 0.75rem;
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin-top: 0.25rem;
+  margin-top: 0.35rem;
+  box-sizing: border-box;
+  font-weight: 400;
 }
+
+label input:focus {
+  border-color: #0066ee;
+  outline: 2px solid #0066ee;
+  outline-offset: 0;
+}
+
 .error {
   color: #c03232;
-  font-size: 0.875rem;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  font-weight: 400;
 }
 .hint {
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   color: #666;
   margin-bottom: 1rem;
 }
 .nav-buttons {
   display: flex;
   justify-content: flex-end;
-  margin-top: 1rem;
+  margin-top: 1.25rem;
 }
 .nav-buttons button {
   padding: 0.6rem 1.2rem;
@@ -89,6 +110,7 @@ label input[type="date"] {
   background: #0066ee;
   color: #fff;
   cursor: pointer;
+  font-weight: 600;
 }
 .nav-buttons button:hover {
   background: #0048aa;
@@ -99,8 +121,8 @@ label input[type="date"] {
   margin-bottom: 1.5rem;
 }
 .avatar-preview {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border: 2px dashed #888;
   border-radius: 50%;
   display: flex;
@@ -110,6 +132,9 @@ label input[type="date"] {
   cursor: pointer;
   margin: 0 auto 1rem;
   overflow: hidden;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0.5rem;
 }
 .avatar-preview img {
   width: 100%;
@@ -123,18 +148,24 @@ label input[type="date"] {
   padding: 1rem;
   margin-bottom: 1rem;
 }
-
+.interests-field legend {
+  font-weight: 600;
+  padding: 0 0.35rem;
+}
 .interests-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 0.1rem;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.2rem;
   margin-top: 0.75rem;
 }
-
 .checkbox {
   cursor: pointer;
   font-size: 0.95rem;
+  user-select: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .checkbox input {
-  margin-right: 0.4rem;
+  margin-right: 0.45rem;
 }
